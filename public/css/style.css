@@ -88,3 +88,11 @@ table tr:hover {
     border: none;
     border-radius: 5px;
 }
+
+/* Footer styles */
+footer {
+    background-color: #363847;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
