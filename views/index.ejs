@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing Platform</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+    <h1>Recipe Sharing Platform</h1>
+
+    <h2>All Recipes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Ingredients</th>
+                <th>Instructions</th>
+                <th>Actions</th> <!-- New column for actions -->
+            </tr>
+        </thead>
+        <tbody>
+            <% allRecipes.map(recipe => { %>
+                <tr class="single_recipe" recipe-id="<%= recipe.id %>">
+                    <td><%= recipe.title %></td>
+                    <td><%= recipe.description %></td>
+                    <td><%= recipe.ingredients %></td>
+                    <td><%= recipe.instructions %></td>
+                    <td>
+                        <button class="editRecipeBtn" data-id="<%= recipe.id %>">Edit</button>
+                        <button class="deleteRecipeBtn" data-id="<%= recipe.id %>">Delete</button>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <h2>Add New Recipe</h2>
+    <form id="addRecipeForm" action="/recipes" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <label for="ingredients">Ingredients:</label>
+        <textarea id="ingredients" name="ingredients" required></textarea><br>
+
+        <label for="instructions">Instructions:</label>
+        <textarea id="instructions" name="instructions" required></textarea><br>
+
+        <button type="submit">Add Recipe</button>
+    </form>
+
+    <h2>Update Recipe</h2>
+    <form id="updateRecipeForm" action="/recipes">
+        <input type="hidden" id="updateId" name="id">
+        <label for="updateTitle">Title:</label>
+        <input type="text" id="updateTitle" name="title" required><br>
+
+        <label for="updateDescription">Description:</label>
+        <textarea id="updateDescription" name="description" required></textarea><br>
+
+        <label for="updateIngredients">Ingredients:</label>
+        <textarea id="updateIngredients" name="ingredients" required></textarea><br>
+
+        <label for="updateInstructions">Instructions:</label>
+        <textarea id="updateInstructions" name="instructions" required></textarea><br>
+
+        <button id="updateRecipeBtn" type="submit">Save</button>
+</form>
+
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
