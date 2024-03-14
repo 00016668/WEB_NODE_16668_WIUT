@@ -3,7 +3,7 @@ const router = express.Router();
 const controllers = require('../controller/controller.js');
 const validateRecipeInputMiddleware = require('../validator/validator.js');
 
-router.get('/app', controllers.MAIN_PAGE);
+router.get('/', controllers.MAIN_PAGE);
 
 router.post('/recipes', validateRecipeInputMiddleware, controllers.ADDING_RECIPES);
 

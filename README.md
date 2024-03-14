@@ -33,3 +33,6 @@ app.js: Main entry point for the application where the Express server is created
 
 # LINKS FOR GITHUB
 https://github.com/00016668/WEB_NODE_16668_WIUT.git
+# LINK FOR RENDER DEPLOYMENT
+https://web-node-16668-wiut.onrender.com
+
