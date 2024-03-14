@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": 1,
+        "title": "Somsa",
+        "description": "Somsa bu o'zbek milliy taomi bo'lib, to'ylarda hamma marakalarda qilinadi",
+        "ingredients": "sabzi, tuz, suv, guruch, yog', piyoz, zira, go'sht, sarimsoq piyoz\r\n",
+        "instructions": "Avvaliga qozonga yog' solinadi, keyin go'sht qovuriladi, keyin to'g'ralgan sabzini solib pishamiz va uni 20 min suvi chiqqunga qadar past olovda pishiramiz. keyin guruch solib, ustidan suv quyiladi, keyin suvini tortib olgandan keyin 20 min damladi va osh tayyor"
+    }
+]
